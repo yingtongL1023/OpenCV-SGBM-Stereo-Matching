@@ -1,4 +1,4 @@
-# 👀 Stereo Matching And Point Cloud Generation Using OpenCV SBGM
+# 👀 Stereo Matching And Point Cloud Generation Using OpenCV SGBM
 
 A simple stereo matching example with sample images and runnable code.
 
