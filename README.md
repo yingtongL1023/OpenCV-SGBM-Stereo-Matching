@@ -1,1 +1,1 @@
-Simple image modification using opencv
+Stereo Matching based on OpenCV SGBM
