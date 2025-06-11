@@ -20,5 +20,9 @@ python opencv_stereo_pcd_gen.py
 
 ## 📷 Example Output
 Real image group 1 is used to generate a point cloud. Output as below:
-![Sample Point Cloud Generated From Image Group 1] (sample_results/sample_pcd_1.jpg)
 
+<p align="center">
+  <img src="./sample_results/sample_pcd_1.jpg" width="600"/>
+  <br>
+  <em>Figure 1. Sample point cloud generated from image group 1</em>
+</p>
