@@ -34,12 +34,12 @@ def load_params(json_path):
 
 def main():
     # === Load stereo images ===
-    imgL = cv.imread('/home/amllaptop/Desktop/20250605_stereo_matching/benchmark_eval/left.png')
-    imgR = cv.imread('/home/amllaptop/Desktop/20250605_stereo_matching/benchmark_eval/right.png')
+    imgL = cv.imread('/path/to/the/left/image/left.png')
+    imgR = cv.imread('/path/to/the/right/image/right.png')
 
     # === Load calibration parameters ===
-    K1, D1, R1_raw, P1 = load_params('/home/amllaptop/Desktop/20250605_stereo_matching/benchmark_eval/left_camera_info.json')
-    K2, D2, R2_raw, P2 = load_params('/home/amllaptop/Desktop/20250605_stereo_matching/benchmark_eval/right_camera_info.json')
+    K1, D1, R1_raw, P1 = load_params('/path/to/the/left/camera/info/left_camera_info.json')
+    K2, D2, R2_raw, P2 = load_params('/path/to/the/right/camera/info/right_camera_info.json')
 
     # === Estimate R and T from P1 and P2 ===
     fx = P1[0, 0]
@@ -89,9 +89,9 @@ def main():
     out_colors = colors_filtered[valid_mask]
 
     # === Save point cloud ===
-    output_folder = '/home/amllaptop/Desktop/20250605_stereo_matching/output_ply'
+    output_folder = '/output/point_cloud/folder/path'
     os.makedirs(output_folder, exist_ok=True)
-    out_fn = os.path.join(output_folder, 'out_0605_2.ply')
+    out_fn = os.path.join(output_folder, 'point_cloud_name.ply')
     write_ply(out_fn, out_points, out_colors)
     print(f'{out_fn} saved.')
 
